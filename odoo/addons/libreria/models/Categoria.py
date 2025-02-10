@@ -2,7 +2,7 @@
 
 from odoo import models, fields
 
-class Categoria(models.model):
+class Categoria(models.Model):
     _name = 'libreria.categoria'
     _description = 'Categoría'
     
