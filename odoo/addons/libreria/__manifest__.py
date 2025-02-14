@@ -23,8 +23,9 @@ Long description of module's purpose
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+        'views/categoria.xml',
+        'views/libro.xml',
+        'views/menus.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

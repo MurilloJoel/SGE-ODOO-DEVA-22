@@ -1,0 +1,28 @@
+<odoo>
+  <data>
+    <record id="libreria.categoria_tree" model="ir.ui.view">
+      <field name="name">libreria.categoria.tree</field>
+      <field name="model">libreria.categoria</field>
+      <field name="arch" type="xml">
+        <tree string="Categoría">
+          <field name="name"></field>
+          <field name="description" />
+        </tree>
+      </field>
+    </record>
+    <record id="libreria.categoria_form" model="ir.ui.view">
+      <field name="name">libreria.categoria.form</field>
+      <field name="model">libreria.categoria</field>
+      <field name="arch" type="xml">
+        <form string="">
+          <sheet>
+            <group>
+              <field name="name"></field>
+              <field name="description"></field>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+  </data>
+</odoo>
