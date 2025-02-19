@@ -23,7 +23,8 @@ Long description of module's purpose
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'views/dish_views.xml'
+        'views/dish_views.xml',
+        'views/category_views.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

@@ -1,0 +1,74 @@
+<odoo>
+    <!-- Vista Tree para Category -->
+    <record id="view_category_tree" model="ir.ui.view">
+        <field name="name">kitchen.category.tree</field>
+        <field name="model">kitchen.category</field>
+        <field name="arch" type="xml">
+            <tree string="Categorías">
+                <field name="name"/>
+                <field name="parent_id"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista Form para Category -->
+    <record id="view_category_form" model="ir.ui.view">
+        <field name="name">kitchen.category.form</field>
+        <field name="model">kitchen.category</field>
+        <field name="arch" type="xml">
+            <form string="Categoría">
+                <sheet>
+                    <!-- Información Básica -->
+                    <group>
+                        <field name="name"/>
+                        <field name="active"/>
+                    </group>
+                    <group>
+                        <field name="parent_id"/>
+                        <field name="description"/>
+                    </group>
+                    <!-- Pestañas para los One2many -->
+                    <notebook>
+                        <page string="Platos">
+                            <field name="dish_ids" nolabel="1">
+                                <!-- Vista Tree embebida para los platos -->
+                                <tree editable="bottom">
+                                    <field name="name"/>
+                                    <!-- Puedes agregar más campos del modelo dish según sea necesario -->
+                                </tree>
+                                <!-- Opcional: vista Form embebida para editar platos -->
+                                <form string="Plato">
+                                    <sheet>
+                                        <group>
+                                            <field name="name"/>
+                                            <!-- Agrega otros campos de dish que requieras -->
+                                        </group>
+                                    </sheet>
+                                </form>
+                            </field>
+                        </page>
+                        <page string="Ingredientes">
+                            <field name="ingredient_ids" nolabel="1">
+                                <!-- Vista Tree embebida para los ingredientes -->
+                                <tree editable="bottom">
+                                    <field name="name"/>
+                                    <!-- Puedes agregar más campos del modelo ingredient según sea necesario -->
+                                </tree>
+                                <!-- Opcional: vista Form embebida para editar ingredientes -->
+                                <form string="Ingrediente">
+                                    <sheet>
+                                        <group>
+                                            <field name="name"/>
+                                            <!-- Agrega otros campos de ingredient que requieras -->
+                                        </group>
+                                    </sheet>
+                                </form>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
