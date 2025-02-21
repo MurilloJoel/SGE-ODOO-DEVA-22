@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "libreria2",
+    'name': "Gestion_Restaurantes",
 
     'summary': "Short (1 phrase/line) summary of the module's purpose",
 
@@ -23,9 +23,11 @@ Long description of module's purpose
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'views/categoria.xml',
-        'views/libro.xml',
-        'views/menus.xml'
+        'views/menus.xml',
+        'views/dish_views.xml',
+        'views/category_views.xml',
+        'views/ingredient_views.xml',
+        'views/preparation_views.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

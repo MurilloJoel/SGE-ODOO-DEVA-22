@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="jmm_gestion_restaurantes.dish_action" model="ir.actions.act_window">
+            <field name="name">Category</field>
+            <field name="res_model">jmm_gestion_restaurantes.category</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <menuitem
+            id="jmm_gestion_restaurantes.root"
+            name="Cocina"
+            sequence="10"/>
+        <menuitem
+            id="jmm_gestion_restaurantes.dish_menu"
+            name="Dish"
+            sequence="10"
+            parent="jmm_gestion_restaurantes.root"
+            action="jmm_gestion_restaurantes.dish_action"
+            />
+    </data>
+    
+</odoo>

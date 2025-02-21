@@ -1,8 +1,8 @@
 <odoo>
     <!-- Vista Tree para Category -->
     <record id="view_category_tree" model="ir.ui.view">
-        <field name="name">kitchen.category.tree</field>
-        <field name="model">kitchen.category</field>
+        <field name="name">jmm_gestion_restaurantes.category.tree</field>
+        <field name="model">jmm_gestion_restaurantes.category</field>
         <field name="arch" type="xml">
             <tree string="Categorías">
                 <field name="name"/>
@@ -14,8 +14,8 @@
 
     <!-- Vista Form para Category -->
     <record id="view_category_form" model="ir.ui.view">
-        <field name="name">kitchen.category.form</field>
-        <field name="model">kitchen.category</field>
+        <field name="name">jmm_gestion_restaurantes.category.form</field>
+        <field name="model">jmm_gestion_restaurantes.category</field>
         <field name="arch" type="xml">
             <form string="Categoría">
                 <sheet>

@@ -1,8 +1,8 @@
 <odoo>
     <!-- Dish Views -->
     <record id="view_dish_tree" model="ir.ui.view">
-        <field name="name">kitchen.dish.tree</field>
-        <field name="model">kitchen.dish</field>
+        <field name="name">jmm_gestion_restaurantes.dish.tree</field>
+        <field name="model">jmm_gestion_restaurantes.dish</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
@@ -14,8 +14,8 @@
     </record>
 
     <record id="view_dish_form" model="ir.ui.view">
-        <field name="name">kitchen.dish.form</field>
-        <field name="model">kitchen.dish</field>
+        <field name="name">jmm_gestion_restaurantes.dish.form</field>
+        <field name="model">jmm_gestion_restaurantes.dish</field>
         <field name="arch" type="xml">
             <form>
                 <sheet>

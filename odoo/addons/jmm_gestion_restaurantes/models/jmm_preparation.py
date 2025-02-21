@@ -1,7 +1,7 @@
 from odoo import models, fields
 
 class Preparation(models.Model):
-    _name = 'JMM_kitchen.preparation'
+    _name = 'jmm_gestion_restaurantes.preparation'
     _description = 'Preparation Method'
 
     name = fields.Char(string='Method Name', required=True)
@@ -10,7 +10,7 @@ class Preparation(models.Model):
     time = fields.Float(string='Average Time (mins)')
     equipment = fields.Char(string='Required Equipment')
     dish_ids = fields.One2many(
-        'JMM_kitchen.dish', 
+        'jmm_gestion_restaurantes.dish', 
         'preparation_method_id', 
         string='Dishes'
     )
