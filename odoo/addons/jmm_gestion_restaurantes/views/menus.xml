@@ -2,11 +2,26 @@
 <odoo>
     <data>
         <record id="jmm_gestion_restaurantes.dish_action" model="ir.actions.act_window">
+            <field name="name">Dish</field>
+            <field name="res_model">jmm_gestion_restaurantes.dish</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="jmm_gestion_restaurantes.category_action" model="ir.actions.act_window">
             <field name="name">Category</field>
             <field name="res_model">jmm_gestion_restaurantes.category</field>
             <field name="view_mode">tree,form</field>
         </record>
-
+        <record id="jmm_gestion_restaurantes.ingredient_action" model="ir.actions.act_window">
+            <field name="name">Ingredient</field>
+            <field name="res_model">jmm_gestion_restaurantes.ingredient</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <record id="jmm_gestion_restaurantes.preparation_action" model="ir.actions.act_window">
+            <field name="name">Preparation</field>
+            <field name="res_model">jmm_gestion_restaurantes.preparation</field>
+            <field name="view_mode">tree,form</field>
+        </record>
 
         <menuitem
             id="jmm_gestion_restaurantes.root"
@@ -18,7 +33,28 @@
             sequence="10"
             parent="jmm_gestion_restaurantes.root"
             action="jmm_gestion_restaurantes.dish_action"
-            />
+        />
+        <menuitem
+            id="jmm_gestion_restaurantes.category_menu"
+            name="Category"
+            sequence="10"
+            parent="jmm_gestion_restaurantes.root"
+            action="jmm_gestion_restaurantes.category_action"
+        />
+        <menuitem
+            id="jmm_gestion_restaurantes.ingredient_menu"
+            name="Ingredients"
+            sequence="10"
+            parent="jmm_gestion_restaurantes.root"
+            action="jmm_gestion_restaurantes.ingredient_action"
+        />
+        <menuitem
+            id="jmm_gestion_restaurantes.preparation_menu"
+            name="Preparation"
+            sequence="10"
+            parent="jmm_gestion_restaurantes.root"
+            action="jmm_gestion_restaurantes.preparation_action"
+        />
     </data>
     
 </odoo>

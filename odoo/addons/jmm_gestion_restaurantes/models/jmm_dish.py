@@ -19,7 +19,7 @@ class Dish(models.Model):
         relation="jmm_gestion_ingredient_dish",
         string='Ingredients'
     )
-    image = fields.Binary(string='Dish Image')
+    image = fields.Image(string='Dish Image',store=True,relation="rest.partner",help='Seleccionar Imagen')
     active = fields.Boolean(string='Active', default=True)
     price = fields.Float(string='Price')
     calories = fields.Float(string='Calories')

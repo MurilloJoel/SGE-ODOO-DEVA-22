@@ -21,6 +21,7 @@
                 <sheet>
                     <group>
                         <field name="name"/>
+                        <field name="image" widget="image" class="oe_left" options="{'size':[265,300]}"/>
                         <field name="category_id"/>
                         <field name="preparation_method_id"/>
                         <field name="price"/>
@@ -34,7 +35,7 @@
                             <field name="unit_of_measure"/>
                         </tree>
                     </field>
-                    <field name="image" widget="image"/>
+                    
                 </sheet>
             </form>
         </field>
