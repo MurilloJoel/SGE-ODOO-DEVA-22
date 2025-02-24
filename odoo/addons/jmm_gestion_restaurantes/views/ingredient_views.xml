@@ -1,5 +1,5 @@
 <odoo>
-    <!-- ingredient Views -->
+    <!-- Ingredient Views -->
     <record id="view_ingredient_tree" model="ir.ui.view">
         <field name="name">jmm_gestion_restaurantes.ingredient.tree</field>
         <field name="model">jmm_gestion_restaurantes.ingredient</field>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
+        <!-- Actions -->
         <record id="jmm_gestion_restaurantes.dish_action" model="ir.actions.act_window">
             <field name="name">Dish</field>
             <field name="res_model">jmm_gestion_restaurantes.dish</field>
@@ -23,6 +24,7 @@
             <field name="view_mode">tree,form</field>
         </record>
 
+        <!-- Items -->
         <menuitem
             id="jmm_gestion_restaurantes.root"
             name="Cocina"

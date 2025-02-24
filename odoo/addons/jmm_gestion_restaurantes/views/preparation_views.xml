@@ -1,5 +1,5 @@
 <odoo>
-    <!-- preparation Views -->
+    <!-- Preparation Views -->
     <record id="view_preparation_tree" model="ir.ui.view">
         <field name="name">jmm_gestion_restaurantes.preparation.tree</field>
         <field name="model">jmm_gestion_restaurantes.preparation</field>
