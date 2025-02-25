@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Categoría de Módulo -->
+        <record model="ir.module.category" id="module_category_gestion_restaurantes">
+            <field name="name">Gestión de Restaurantes</field>
+            <field name="description">Categoría de permisos para el módulo de gestión de restaurantes</field>
+            <field name="sequence">10</field>
+        </record>
+
+        <!-- Grupo de Usuarios de Restaurantes -->
+        <record model="res.groups" id="group_gestion_restaurantes_user">
+            <field name="name">Usuario de Gestión de Restaurantes</field>
+            <field name="category_id" ref="module_category_gestion_restaurantes"/>
+            <field name="comment">Usuarios con permisos básicos para gestionar restaurantes</field>
+            <field name="users" eval="[(4, ref('base.user_demo'))]"/>
+        </record>
+
+        <!-- Grupo de Administradores de Restaurantes -->
+        <record model="res.groups" id="group_gestion_restaurantes_admin">
+            <field name="name">Administrador de Gestión de Restaurantes</field>
+            <field name="category_id" ref="module_category_gestion_restaurantes"/>
+            <field name="comment">Administradores con acceso total al módulo de gestión de restaurantes</field>
+            <field name="implied_ids" eval="[(4, ref('group_gestion_restaurantes_user'))]"/>
+        </record>
+    </data>
+</odoo>
