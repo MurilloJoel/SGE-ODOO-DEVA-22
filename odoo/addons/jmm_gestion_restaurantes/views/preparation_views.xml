@@ -26,8 +26,15 @@
                         <field name="equipment"/>
                     </group>
                     <field name="description"/>
-                    <field name="dish_ids"/>
-                    
+                    <!-- Vista anidada para dish_ids -->
+                    <field name="dish_ids">
+                        <tree>
+                            <field name="name"/>
+                            <field name="category_id"/>
+                            <field name="preparation_time"/>
+                            <field name="price"/>
+                        </tree>
+                    </field>
                 </sheet>
             </form>
         </field>
