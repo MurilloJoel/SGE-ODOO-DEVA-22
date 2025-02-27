@@ -22,17 +22,15 @@ Long description of module's purpose
 
     # always loaded
     'data': [
-        'security/groups.xml',
-        'security/ir.model.access.csv',
-        'views/menus.xml',
-        'views/dish_views.xml',
-        'views/category_views.xml',
-        'views/ingredient_views.xml',
-        'views/preparation_views.xml'
-    ],
-    # only loaded in demonstration mode
-    'demo': [
-        'demo/demo.xml',
-    ],
+    'security/groups.xml',
+    'security/ir.model.access.csv',
+    'views/category_views.xml',
+    'views/dish_views.xml',
+    'views/ingredient_views.xml',
+    'views/preparation_views.xml',
+    'views/menus.xml',
+    'demo/demo.xml'
+]
+    
 }
 

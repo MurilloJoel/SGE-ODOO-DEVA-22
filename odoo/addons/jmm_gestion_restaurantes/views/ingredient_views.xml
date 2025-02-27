@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <!-- Ingredient Views -->
+    <!-- Vistas para Ingredient -->
     <record id="view_ingredient_tree" model="ir.ui.view">
         <field name="name">jmm_gestion_restaurantes.ingredient.tree</field>
         <field name="model">jmm_gestion_restaurantes.ingredient</field>
@@ -9,8 +10,6 @@
                 <field name="category_id"/>
                 <field name="unit_of_measure"/>
                 <field name="stock"/>
-                <field name="minimum_stock"/>
-                <field name="supplier"/>
             </tree>
         </field>
     </record>
@@ -29,13 +28,11 @@
                         <field name="minimum_stock"/>
                         <field name="supplier"/>
                     </group>
-                    <!-- Vista anidada para dish_id -->
                     <field name="dish_id">
                         <tree>
                             <field name="name"/>
-                            <field name="category_id"/>
-                            <field name="preparation_time"/>
                             <field name="price"/>
+                            <field name="preparation_time"/>
                         </tree>
                     </field>
                 </sheet>

@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <!-- Preparation Views -->
+    <!-- Vistas para Preparation -->
     <record id="view_preparation_tree" model="ir.ui.view">
         <field name="name">jmm_gestion_restaurantes.preparation.tree</field>
         <field name="model">jmm_gestion_restaurantes.preparation</field>
@@ -8,7 +9,6 @@
                 <field name="name"/>
                 <field name="temperature"/>
                 <field name="time"/>
-                <field name="equipment"/>
             </tree>
         </field>
     </record>
@@ -25,14 +25,11 @@
                         <field name="time"/>
                         <field name="equipment"/>
                     </group>
-                    <field name="description"/>
-                    <!-- Vista anidada para dish_ids -->
                     <field name="dish_ids">
                         <tree>
                             <field name="name"/>
-                            <field name="category_id"/>
-                            <field name="preparation_time"/>
                             <field name="price"/>
+                            <field name="preparation_time"/>
                         </tree>
                     </field>
                 </sheet>

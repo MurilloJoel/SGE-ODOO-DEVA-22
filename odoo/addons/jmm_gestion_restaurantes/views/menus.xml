@@ -1,62 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data>
-        <!-- Actions -->
-        <record id="jmm_gestion_restaurantes.dish_action" model="ir.actions.act_window">
-            <field name="name">Dish</field>
+        <!-- Acciones -->
+        <record id="action_category" model="ir.actions.act_window">
+            <field name="name">Categorías</field>
+            <field name="res_model">jmm_gestion_restaurantes.category</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="action_dish" model="ir.actions.act_window">
+            <field name="name">Platos</field>
             <field name="res_model">jmm_gestion_restaurantes.dish</field>
             <field name="view_mode">tree,form</field>
         </record>
 
-        <record id="jmm_gestion_restaurantes.category_action" model="ir.actions.act_window">
-            <field name="name">Category</field>
-            <field name="res_model">jmm_gestion_restaurantes.category</field>
-            <field name="view_mode">tree,form</field>
-        </record>
-        <record id="jmm_gestion_restaurantes.ingredient_action" model="ir.actions.act_window">
-            <field name="name">Ingredient</field>
+        <record id="action_ingredient" model="ir.actions.act_window">
+            <field name="name">Ingredientes</field>
             <field name="res_model">jmm_gestion_restaurantes.ingredient</field>
             <field name="view_mode">tree,form</field>
         </record>
-        <record id="jmm_gestion_restaurantes.preparation_action" model="ir.actions.act_window">
-            <field name="name">Preparation</field>
+
+        <record id="action_preparation" model="ir.actions.act_window">
+            <field name="name">Métodos de Preparación</field>
             <field name="res_model">jmm_gestion_restaurantes.preparation</field>
             <field name="view_mode">tree,form</field>
         </record>
 
-        <!-- Items -->
-        <menuitem
-            id="jmm_gestion_restaurantes.root"
-            name="Cocina"
-            sequence="10"/>
-        <menuitem
-            id="jmm_gestion_restaurantes.dish_menu"
-            name="Dish"
-            sequence="10"
-            parent="jmm_gestion_restaurantes.root"
-            action="jmm_gestion_restaurantes.dish_action"
-        />
-        <menuitem
-            id="jmm_gestion_restaurantes.category_menu"
-            name="Category"
-            sequence="10"
-            parent="jmm_gestion_restaurantes.root"
-            action="jmm_gestion_restaurantes.category_action"
-        />
-        <menuitem
-            id="jmm_gestion_restaurantes.ingredient_menu"
-            name="Ingredients"
-            sequence="10"
-            parent="jmm_gestion_restaurantes.root"
-            action="jmm_gestion_restaurantes.ingredient_action"
-        />
-        <menuitem
-            id="jmm_gestion_restaurantes.preparation_menu"
-            name="Preparation"
-            sequence="10"
-            parent="jmm_gestion_restaurantes.root"
-            action="jmm_gestion_restaurantes.preparation_action"
-        />
+        <!-- Menú Principal -->
+        <menuitem id="menu_root" name="Gestión de Cocina" sequence="10"/>
+
+        <!-- Submenús -->
+        <menuitem id="menu_category" name="Categorías" parent="menu_root" action="action_category" sequence="10"/>
+        <menuitem id="menu_dish" name="Platos" parent="menu_root" action="action_dish" sequence="20"/>
+        <menuitem id="menu_ingredient" name="Ingredientes" parent="menu_root" action="action_ingredient" sequence="30"/>
+        <menuitem id="menu_preparation" name="Métodos de Preparación" parent="menu_root" action="action_preparation" sequence="40"/>
     </data>
-    
 </odoo>
