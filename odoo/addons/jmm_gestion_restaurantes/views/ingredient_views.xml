@@ -27,6 +27,7 @@
                         <field name="stock"/>
                         <field name="minimum_stock"/>
                         <field name="supplier"/>
+                        <field name="image" widget="image" options="{'size': [265, 300]}"/> <!-- Agregar campo de imagen en el formulario -->
                     </group>
                     <field name="dish_id">
                         <tree>
@@ -37,6 +38,51 @@
                     </field>
                 </sheet>
             </form>
+        </field>
+    </record>
+
+    <!-- Vista Kanban para Ingredient -->
+    <record id="view_ingredient_kanban" model="ir.ui.view">
+        <field name="name">jmm_gestion_restaurantes.ingredient.kanban</field>
+        <field name="model">jmm_gestion_restaurantes.ingredient</field>
+        <field name="arch" type="xml">
+            <kanban string="Ingredientes">
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_card">
+                            <!-- Aquí se agrega la imagen -->
+                            <div class="oe_kanban_image">
+                                <field name="image" widget="image" options="{'size': [265, 300]}"/>
+                            </div>
+                            <div class="oe_kanban_header">
+                                <strong><field name="name"/></strong>
+                            </div>
+                            <div class="oe_kanban_details">
+                                <div class="text-muted">
+                                    <div>Categoría: <field name="category_id"/></div>
+                                    <div>Unidad: <field name="unit_of_measure"/></div>
+                                </div>
+                                <div class="oe_kanban_footer">
+                                    <div class="oe_kanban_content">
+                                        <div>
+                                            <i class="fa fa-cubes"/> 
+                                            Stock: <field name="stock"/>
+                                        </div>
+                                        <div>
+                                            <i class="fa fa-exclamation-triangle"/> 
+                                            Mínimo: <field name="minimum_stock"/>
+                                        </div>
+                                        <div>
+                                            <i class="fa fa-truck"/> 
+                                            <field name="supplier"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
         </field>
     </record>
 </odoo>

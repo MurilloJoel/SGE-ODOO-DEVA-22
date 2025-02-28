@@ -74,6 +74,8 @@
       <field name="stock">10.0</field>
       <field name="minimum_stock">2.0</field>
       <field name="supplier">Proveedor A</field>
+      <!-- Se carga la imagen localmente en formato base64 -->
+      <field name="image" type="base64" file="jmm_gestion_restaurantes/static/description/tomate.png"/>
     </record>
     <record id="demo_ingredient_2" model="jmm_gestion_restaurantes.ingredient">
       <field name="name">Queso</field>
@@ -83,6 +85,8 @@
       <field name="stock">5.0</field>
       <field name="minimum_stock">1.0</field>
       <field name="supplier">Proveedor B</field>
+      <!-- Se carga la imagen localmente en formato base64 -->
+      <field name="image" type="base64" file="jmm_gestion_restaurantes/static/description/queso.png"/>
     </record>
     <record id="demo_ingredient_3" model="jmm_gestion_restaurantes.ingredient">
       <field name="name">Harina</field>
@@ -92,6 +96,8 @@
       <field name="stock">20.0</field>
       <field name="minimum_stock">5.0</field>
       <field name="supplier">Proveedor C</field>
+      <!-- Se carga la imagen localmente en formato base64 -->
+      <field name="image" type="base64" file="jmm_gestion_restaurantes/static/description/harina.png"/>
     </record>
     <record id="demo_ingredient_4" model="jmm_gestion_restaurantes.ingredient">
       <field name="name">Lechuga</field>
@@ -101,6 +107,8 @@
       <field name="stock">8.0</field>
       <field name="minimum_stock">2.0</field>
       <field name="supplier">Proveedor D</field>
+      <!-- Se carga la imagen localmente en formato base64 -->
+      <field name="image" type="base64" file="jmm_gestion_restaurantes/static/description/lechuga.png"/>
     </record>
     <record id="demo_ingredient_5" model="jmm_gestion_restaurantes.ingredient">
       <field name="name">Aceite de oliva</field>
@@ -110,77 +118,79 @@
       <field name="stock">15.0</field>
       <field name="minimum_stock">3.0</field>
       <field name="supplier">Proveedor E</field>
+      <!-- Se carga la imagen localmente en formato base64 -->
+      <field name="image" type="base64" file="jmm_gestion_restaurantes/static/description/aceite.png"/>
     </record>
 
     <!-- Registros para Platos -->
-<record id="demo_dish_1" model="jmm_gestion_restaurantes.dish">
-  <field name="name">Ensalada Mixta</field>
-  <field name="description">Ensalada con tomate, lechuga y aderezo de aceite de oliva.</field>
-  <field name="category_id" ref="demo_category_5"/>
-  <field name="preparation_method_id" ref="demo_preparation_5"/>
-  <field name="ingredient_ids" eval="[(6, 0, [ref('demo_ingredient_1'), ref('demo_ingredient_4'), ref('demo_ingredient_5')])]"/>
-  <field name="active" eval="True"/>
-  <field name="price">8.5</field>
-  <field name="calories">150.0</field>
-  <field name="preparation_time">5.0</field>
-  <!-- Se carga la imagen localmente en formato base64 -->
-  <field name="image" type="base64" file="jmm_gestion_restaurantes/static/description/ensalada.png"/>
-</record>
+    <record id="demo_dish_1" model="jmm_gestion_restaurantes.dish">
+      <field name="name">Ensalada Mixta</field>
+      <field name="description">Ensalada con tomate, lechuga y aderezo de aceite de oliva.</field>
+      <field name="category_id" ref="demo_category_5"/>
+      <field name="preparation_method_id" ref="demo_preparation_5"/>
+      <field name="ingredient_ids" eval="[(6, 0, [ref('demo_ingredient_1'), ref('demo_ingredient_4'), ref('demo_ingredient_5')])]"/>
+      <field name="active" eval="True"/>
+      <field name="price">8.5</field>
+      <field name="calories">150.0</field>
+      <field name="preparation_time">5.0</field>
+      <!-- Se carga la imagen localmente en formato base64 -->
+      <field name="image" type="base64" file="jmm_gestion_restaurantes/static/description/ensalada.png"/>
+    </record>
 
-<record id="demo_dish_2" model="jmm_gestion_restaurantes.dish">
-  <field name="name">Pizza Margherita</field>
-  <field name="description">Pizza clásica con queso mozzarella y salsa de tomate.</field>
-  <field name="category_id" ref="demo_category_2"/>
-  <field name="preparation_method_id" ref="demo_preparation_2"/>
-  <field name="ingredient_ids" eval="[(6, 0, [ref('demo_ingredient_2'), ref('demo_ingredient_3'), ref('demo_ingredient_1')])]"/>
-  <field name="active" eval="True"/>
-  <field name="price">12.0</field>
-  <field name="calories">800.0</field>
-  <field name="preparation_time">15.0</field>
-  <!-- Ruta corregida -->
-  <field name="image" type="base64" file="jmm_gestion_restaurantes/static/description/margarita.png"/>
-</record>
+    <record id="demo_dish_2" model="jmm_gestion_restaurantes.dish">
+      <field name="name">Pizza Margherita</field>
+      <field name="description">Pizza clásica con queso mozzarella y salsa de tomate.</field>
+      <field name="category_id" ref="demo_category_2"/>
+      <field name="preparation_method_id" ref="demo_preparation_2"/>
+      <field name="ingredient_ids" eval="[(6, 0, [ref('demo_ingredient_2'), ref('demo_ingredient_3'), ref('demo_ingredient_1')])]"/>
+      <field name="active" eval="True"/>
+      <field name="price">12.0</field>
+      <field name="calories">800.0</field>
+      <field name="preparation_time">15.0</field>
+      <!-- Se carga la imagen localmente en formato base64 -->
+      <field name="image" type="base64" file="jmm_gestion_restaurantes/static/description/margarita.png"/>
+    </record>
 
-<record id="demo_dish_3" model="jmm_gestion_restaurantes.dish">
-  <field name="name">Lasaña</field>
-  <field name="description">Lasaña italiana con capas de queso y salsa de tomate.</field>
-  <field name="category_id" ref="demo_category_2"/>
-  <field name="preparation_method_id" ref="demo_preparation_2"/>
-  <field name="ingredient_ids" eval="[(6, 0, [ref('demo_ingredient_2'), ref('demo_ingredient_3'), ref('demo_ingredient_1')])]"/>
-  <field name="active" eval="True"/>
-  <field name="price">14.5</field>
-  <field name="calories">900.0</field>
-  <field name="preparation_time">25.0</field>
-  <!-- Se carga la imagen localmente en formato base64 -->
-  <field name="image" type="base64" file="jmm_gestion_restaurantes/static/description/lasagna.png"/>
-</record>
+    <record id="demo_dish_3" model="jmm_gestion_restaurantes.dish">
+      <field name="name">Lasaña</field>
+      <field name="description">Lasaña italiana con capas de queso y salsa de tomate.</field>
+      <field name="category_id" ref="demo_category_2"/>
+      <field name="preparation_method_id" ref="demo_preparation_2"/>
+      <field name="ingredient_ids" eval="[(6, 0, [ref('demo_ingredient_2'), ref('demo_ingredient_3'), ref('demo_ingredient_1')])]"/>
+      <field name="active" eval="True"/>
+      <field name="price">14.5</field>
+      <field name="calories">900.0</field>
+      <field name="preparation_time">25.0</field>
+      <!-- Se carga la imagen localmente en formato base64 -->
+      <field name="image" type="base64" file="jmm_gestion_restaurantes/static/description/lasagna.png"/>
+    </record>
 
-<record id="demo_dish_4" model="jmm_gestion_restaurantes.dish">
-  <field name="name">Paella</field>
-  <field name="description">Paella tradicional con mariscos y verduras.</field>
-  <field name="category_id" ref="demo_category_2"/>
-  <field name="preparation_method_id" ref="demo_preparation_3"/>
-  <field name="ingredient_ids" eval="[(6, 0, [ref('demo_ingredient_1'), ref('demo_ingredient_5')])]"/>
-  <field name="active" eval="True"/>
-  <field name="price">16.0</field>
-  <field name="calories">700.0</field>
-  <field name="preparation_time">30.0</field>
-  <!-- Se carga la imagen localmente en formato base64 -->
-  <field name="image" type="base64" file="jmm_gestion_restaurantes/static/description/paella.png"/>
-</record>
+    <record id="demo_dish_4" model="jmm_gestion_restaurantes.dish">
+      <field name="name">Paella</field>
+      <field name="description">Paella tradicional con mariscos y verduras.</field>
+      <field name="category_id" ref="demo_category_2"/>
+      <field name="preparation_method_id" ref="demo_preparation_3"/>
+      <field name="ingredient_ids" eval="[(6, 0, [ref('demo_ingredient_1'), ref('demo_ingredient_5')])]"/>
+      <field name="active" eval="True"/>
+      <field name="price">16.0</field>
+      <field name="calories">700.0</field>
+      <field name="preparation_time">30.0</field>
+      <!-- Se carga la imagen localmente en formato base64 -->
+      <field name="image" type="base64" file="jmm_gestion_restaurantes/static/description/paella.png"/>
+    </record>
 
-<record id="demo_dish_5" model="jmm_gestion_restaurantes.dish">
-  <field name="name">Tarta de Queso</field>
-  <field name="description">Postre cremoso con base de galleta y cobertura de queso.</field>
-  <field name="category_id" ref="demo_category_3"/>
-  <field name="preparation_method_id" ref="demo_preparation_2"/>
-  <field name="ingredient_ids" eval="[(6, 0, [ref('demo_ingredient_2')])]"/>
-  <field name="active" eval="True"/>
-  <field name="price">7.0</field>
-  <field name="calories">500.0</field>
-  <field name="preparation_time">20.0</field>
-  <!-- Se carga la imagen localmente en formato base64 -->
-  <field name="image" type="base64" file="jmm_gestion_restaurantes/static/description/tarta_queso.png"/>
-</record>
+    <record id="demo_dish_5" model="jmm_gestion_restaurantes.dish">
+      <field name="name">Tarta de Queso</field>
+      <field name="description">Postre cremoso con base de galleta y cobertura de queso.</field>
+      <field name="category_id" ref="demo_category_3"/>
+      <field name="preparation_method_id" ref="demo_preparation_2"/>
+      <field name="ingredient_ids" eval="[(6, 0, [ref('demo_ingredient_2')])]"/>
+      <field name="active" eval="True"/>
+      <field name="price">7.0</field>
+      <field name="calories">500.0</field>
+      <field name="preparation_time">20.0</field>
+      <!-- Se carga la imagen localmente en formato base64 -->
+      <field name="image" type="base64" file="jmm_gestion_restaurantes/static/description/tarta_queso.png"/>
+    </record>
   </data>
 </odoo>
