@@ -1,4 +1,3 @@
-# Se usa 1,0,0,0 para el grupo por defecto de usuarios, esto permite que solo puedan ser leidos
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_jmm_category_user,access.jmm.category.user,model_jmm_gestion_restaurantes_category,jmm_gestion_restaurantes.group_gestion_restaurantes_user,1,0,0,0
 access_jmm_category_admin,access.jmm.category.admin,model_jmm_gestion_restaurantes_category,jmm_gestion_restaurantes.group_gestion_restaurantes_admin,1,1,1,1
