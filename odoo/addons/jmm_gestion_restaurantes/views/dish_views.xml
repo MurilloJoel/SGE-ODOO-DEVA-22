@@ -33,11 +33,52 @@
                         <tree>
                             <field name="name"/>
                             <field name="unit_of_measure"/>
-                            <field name="supplier"/>
                         </tree>
                     </field>
                 </sheet>
             </form>
+        </field>
+    </record>
+
+    <!-- Vista Kanban para Dish -->
+    <record id="view_dish_kanban" model="ir.ui.view">
+        <field name="name">jmm_gestion_restaurantes.dish.kanban</field>
+        <field name="model">jmm_gestion_restaurantes.dish</field>
+        <field name="arch" type="xml">
+            <kanban string="Platos">
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_card">
+                            <div class="oe_kanban_image">
+                                <field name="image" widget="image" options="{'size': [265, 300]}"/>
+                            </div>
+                            <div class="oe_kanban_details">
+                                <strong><field name="name"/></strong>
+                                <div class="text-muted">
+                                    <div>Category: <field name="category_id"/></div>
+                                    <div>Preparation: <field name="preparation_method_id"/></div>
+                                </div>
+                                <div class="oe_kanban_footer">
+                                    <div class="oe_kanban_content">
+                                        <div>
+                                            <i class="fa fa-money"/> 
+                                            <field name="price" widget="monetary"/>
+                                        </div>
+                                        <div>
+                                            <i class="fa fa-fire"/> 
+                                            <field name="calories"/> kcal
+                                        </div>
+                                        <div>
+                                            <i class="fa fa-clock-o"/> 
+                                            <field name="preparation_time"/> mins
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
         </field>
     </record>
 </odoo>

@@ -11,7 +11,7 @@
         <record id="action_dish" model="ir.actions.act_window">
             <field name="name">Platos</field>
             <field name="res_model">jmm_gestion_restaurantes.dish</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">kanban,tree,form</field>  <!-- Vista Kanban añadida -->
         </record>
 
         <record id="action_ingredient" model="ir.actions.act_window">
