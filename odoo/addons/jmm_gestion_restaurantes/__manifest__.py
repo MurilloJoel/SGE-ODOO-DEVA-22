@@ -2,10 +2,10 @@
 {
     'name': "Gestion_Restaurantes",
 
-    'summary': "Short (1 phrase/line) summary of the module's purpose",
+    'summary': "Modulo Gestion de cocinas",
 
     'description': """
-Long description of module's purpose
+        Modulo para la Gestion de las cocinas de los restaurantes
     """,
 
     'author': "My Company",
@@ -30,7 +30,10 @@ Long description of module's purpose
     'views/preparation_views.xml',
     'views/menus.xml',
     'demo/demo.xml'
-]
+],
+    'test': [
+        'tests/test_constraints.py'
+    ]
     
 }
 

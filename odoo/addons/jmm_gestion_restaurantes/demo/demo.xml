@@ -27,38 +27,67 @@
       <field name="description">Categoría de ensaladas.</field>
       <field name="active" eval="True"/>
     </record>
+<!-- Categorías para Ingredientes -->
+    <record id="demo_category_ingredient_1" model="jmm_gestion_restaurantes.category">
+      <field name="name">Proteinas</field>
+      <field name="description">Categoría de Proteinas.</field>
+      <field name="active" eval="True"/>
+    </record>
+    <record id="demo_category_ingredient_2" model="jmm_gestion_restaurantes.category">
+      <field name="name">Aceites</field>
+      <field name="description">Categoría de Aceites.</field>
+      <field name="active" eval="True"/>
+    </record>
+    <record id="demo_category_ingredient_3" model="jmm_gestion_restaurantes.category">
+      <field name="name">Granos</field>
+      <field name="description">Categoría de Granos.</field>
+      <field name="active" eval="True"/>
+    </record>
+    <record id="demo_category_ingredient_4" model="jmm_gestion_restaurantes.category">
+      <field name="name">Verduras y Hortalizas</field>
+      <field name="description">Categoría de Verduras y Hortalizas.</field>
+      <field name="active" eval="True"/>
+    </record>
 
-    <!-- Registros para Ingredientes -->
+    <!-- Registros para Ingredientes con categorías asignadas -->
     <record id="demo_ingredient_1" model="jmm_gestion_restaurantes.ingredient">
       <field name="name">Aceite de oliva</field>
+      <field name="category_id" ref="demo_category_ingredient_2"/> <!-- Aceites -->
       <field name="image" type="base64" file="jmm_gestion_restaurantes/static/description/aceite.png"/>
     </record>
     <record id="demo_ingredient_2" model="jmm_gestion_restaurantes.ingredient">
       <field name="name">Harina</field>
+      <field name="category_id" ref="demo_category_ingredient_3"/> <!-- Granos -->
       <field name="image" type="base64" file="jmm_gestion_restaurantes/static/description/harina.png"/>
     </record>
     <record id="demo_ingredient_3" model="jmm_gestion_restaurantes.ingredient">
       <field name="name">Jamón</field>
+      <field name="category_id" ref="demo_category_ingredient_1"/> <!-- Proteinas -->
       <field name="image" type="base64" file="jmm_gestion_restaurantes/static/description/jamon.png"/>
     </record>
     <record id="demo_ingredient_4" model="jmm_gestion_restaurantes.ingredient">
       <field name="name">Pulpo</field>
+      <field name="category_id" ref="demo_category_ingredient_1"/> <!-- Proteinas -->
       <field name="image" type="base64" file="jmm_gestion_restaurantes/static/description/pulpo.png"/>
     </record>
     <record id="demo_ingredient_5" model="jmm_gestion_restaurantes.ingredient">
       <field name="name">Queso</field>
+      <field name="category_id" ref="demo_category_ingredient_1"/> <!-- Proteinas -->
       <field name="image" type="base64" file="jmm_gestion_restaurantes/static/description/queso.png"/>
     </record>
     <record id="demo_ingredient_6" model="jmm_gestion_restaurantes.ingredient">
       <field name="name">Tomate</field>
+      <field name="category_id" ref="demo_category_ingredient_4"/> <!-- Verduras y Hortalizas -->
       <field name="image" type="base64" file="jmm_gestion_restaurantes/static/description/tomate.png"/>
     </record>
-    <record id="demo_ingredient_6" model="jmm_gestion_restaurantes.ingredient">
+    <record id="demo_ingredient_7" model="jmm_gestion_restaurantes.ingredient">
       <field name="name">Lechuga</field>
+      <field name="category_id" ref="demo_category_ingredient_4"/> <!-- Verduras y Hortalizas -->
       <field name="image" type="base64" file="jmm_gestion_restaurantes/static/description/lechuga.png"/>
     </record>
-    <record id="demo_ingredient_6" model="jmm_gestion_restaurantes.ingredient">
+    <record id="demo_ingredient_8" model="jmm_gestion_restaurantes.ingredient">
       <field name="name">Patatas</field>
+      <field name="category_id" ref="demo_category_ingredient_4"/> <!-- Verduras y Hortalizas -->
       <field name="image" type="base64" file="jmm_gestion_restaurantes/static/description/patatas.png"/>
     </record>
     
