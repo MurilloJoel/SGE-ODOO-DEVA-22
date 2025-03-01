@@ -85,4 +85,20 @@
             </kanban>
         </field>
     </record>
+
+    <!-- Vista Pivot para Ingredient -->
+    <record id="view_ingredient_pivot" model="ir.ui.view">
+        <field name="name">jmm_gestion_restaurantes.ingredient.pivot</field>
+        <field name="model">jmm_gestion_restaurantes.ingredient</field>
+        <field name="arch" type="xml">
+            <pivot string="Análisis de Ingredientes">
+                <!-- Campos para agrupar -->
+                <field name="category_id" type="row"/> <!-- Agrupa por categoría -->
+                <field name="unit_of_measure" type="col"/> <!-- Agrupa por unidad de medida -->
+                <!-- Campos para medir -->
+                <field name="stock" type="measure"/> <!-- Muestra el stock total -->
+                <field name="minimum_stock" type="measure"/> <!-- Muestra el stock mínimo -->
+            </pivot>
+        </field>
+    </record>
 </odoo>
