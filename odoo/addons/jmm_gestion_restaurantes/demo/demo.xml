@@ -49,7 +49,7 @@
       <field name="active" eval="True"/>
     </record>
 
-    <!-- Registros para Ingredientes con categorías asignadas -->
+    <!-- Registros para Ingredientes -->
     <record id="demo_ingredient_1" model="jmm_gestion_restaurantes.ingredient">
       <field name="name">Aceite de oliva</field>
       <field name="category_id" ref="demo_category_ingredient_2"/> <!-- Aceites -->
@@ -150,7 +150,7 @@
       <field name="image" type="base64" file="jmm_gestion_restaurantes/static/description/vino.png"/>
     </record>
 
-    <!-- Registros para Ingredientes con stock y mínimo -->
+    <!-- Registros para Ingredientes -->
     <record id="demo_ingredient_1" model="jmm_gestion_restaurantes.ingredient">
       <field name="name">Aceite de oliva</field>
       <field name="stock">18.5</field>
@@ -207,7 +207,7 @@
       <field name="image" type="base64" file="jmm_gestion_restaurantes/static/description/patatas.png"/>
     </record>
 
-    <!-- Registros para Platos con precio, calorías y tiempo -->
+    <!-- Registros para Platos -->
     <record id="demo_dish_1" model="jmm_gestion_restaurantes.dish">
       <field name="name">Croqueta</field>
       <field name="price">4.50</field>
@@ -296,7 +296,7 @@
       <field name="category_id" ref="demo_category_4"/>
     </record>
 
-        <!-- Registros para Métodos de Preparación con valores numéricos aleatorios -->
+        <!-- Registros para Métodos de Preparación -->
     <record id="demo_preparation_1" model="jmm_gestion_restaurantes.preparation">
       <field name="name">Fritura</field>
       <field name="temperature">182.5</field>
