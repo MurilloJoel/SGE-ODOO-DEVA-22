@@ -11,13 +11,18 @@
         <record id="action_dish" model="ir.actions.act_window">
             <field name="name">Platos</field>
             <field name="res_model">jmm_gestion_restaurantes.dish</field>
-            <field name="view_mode">kanban,tree,form</field>  <!-- Vista Kanban añadida -->
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="search_view_id" ref="view_dish_search"/> <!-- Referencia a la vista de búsqueda -->
+            <field name="context">{'search_default_name': "Lasaña"}</field> <!-- Filtro predeterminado por nombre -->
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Crea tu primer plato</p>
+            </field>
         </record>
 
         <record id="action_ingredient" model="ir.actions.act_window">
             <field name="name">Ingredientes</field>
             <field name="res_model">jmm_gestion_restaurantes.ingredient</field>
-            <field name="view_mode">kanban,tree,form,pivot</field> <!-- Vistas Kanban y Pivot añadidas -->
+            <field name="view_mode">kanban,tree,form,pivot</field>
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">Crea tu primer ingrediente</p>
             </field>

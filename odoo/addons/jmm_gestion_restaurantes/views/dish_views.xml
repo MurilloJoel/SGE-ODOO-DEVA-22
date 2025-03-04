@@ -81,4 +81,20 @@
             </kanban>
         </field>
     </record>
+
+    <!-- Vista de búsqueda para Dish -->
+    <record id="view_dish_search" model="ir.ui.view">
+        <field name="name">jmm_gestion_restaurantes.dish.search</field>
+        <field name="model">jmm_gestion_restaurantes.dish</field>
+        <field name="arch" type="xml">
+            <search string="Buscar Plato">
+                <field name="name"/>
+                <field name="category_id"/>
+                <field name="price"/>
+                <field name="preparation_time"/>
+                <field name="calories"/>
+                <field name="preparation_method_id"/>
+            </search>
+        </field>
+    </record>
 </odoo>
