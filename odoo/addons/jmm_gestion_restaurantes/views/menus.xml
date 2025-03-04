@@ -13,7 +13,7 @@
             <field name="res_model">jmm_gestion_restaurantes.dish</field>
             <field name="view_mode">kanban,tree,form</field>
             <field name="search_view_id" ref="view_dish_search"/> <!-- Referencia a la vista de búsqueda -->
-            <field name="context">{'search_default_name': "Lasaña"}</field> <!-- Filtro predeterminado por nombre -->
+            <field name="context">{'search_default_name': "Lasagna"}</field> <!-- Filtro predeterminado por nombre -->
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">Crea tu primer plato</p>
             </field>

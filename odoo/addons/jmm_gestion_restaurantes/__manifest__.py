@@ -8,7 +8,7 @@
         Modulo para la Gestion de las cocinas de los restaurantes
     """,
 
-    'author': "My Company",
+    'author': "Joel Murillo Masa",
     'website': "https://www.yourcompany.com",
 
     # Categories can be used to filter modules in modules listing
@@ -33,7 +33,8 @@
 ],
     'test': [
         'tests/test_constraints.py'
-    ]
+    ],
+    'application': True,
     
 }
 
